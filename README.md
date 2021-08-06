@@ -1,5 +1,5 @@
 # nilsramsperger/nodebb
-[![dockerhub](https://img.shields.io/docker/pulls/nilsramsperger/nextcloud-client?label=Docker%20pulls)](https://hub.docker.com/r/nilsramsperger/nextcloud-client)
+[![dockerhub](https://img.shields.io/docker/pulls/nilsramsperger/nodebb?label=Docker%20pulls)](https://hub.docker.com/r/nilsramsperger/nextcloud-client)
 [![GitLab](https://img.shields.io/badge/Sources-GitLab-orange)](https://gitlab.com/nilsramsperger/docker-nodebb)
 [![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/NilsRamsperger)
 [![twitter](https://img.shields.io/twitter/follow/nilsramsperger)](https://twitter.com/nilsramsperger)
