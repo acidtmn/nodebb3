@@ -8,8 +8,8 @@ build-latest:
     - docker:dind
   script:
     - 'echo $DOCKERHUB_TOKEN | docker login -u nilsramsperger --password-stdin'
-    - 'docker build --no-cache -t nilsramsperger/nextcloud-client:latest .'
-    - 'docker push nilsramsperger/nextcloud-client:latest'
+    - 'docker build --no-cache -t nilsramsperger/nodebb:latest .'
+    - 'docker push nilsramsperger/nodebb:latest'
   only:
     - master
 
@@ -20,8 +20,8 @@ build-tags:
     - docker:dind
   script:
     - 'echo $DOCKERHUB_TOKEN | docker login -u nilsramsperger --password-stdin'
-    - 'docker build --no-cache -t nilsramsperger/nextcloud-client:$CI_BUILD_REF_NAME .'
-    - 'docker push nilsramsperger/nextcloud-client:$CI_BUILD_REF_NAME'
+    - 'docker build --no-cache -t nilsramsperger/nodebb:$CI_BUILD_REF_NAME .'
+    - 'docker push nilsramsperger/nodebb:$CI_BUILD_REF_NAME'
   only:
     refs:
       - tags
