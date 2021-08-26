@@ -7,7 +7,7 @@ build-latest:
   services:
     - docker:dind
   script:
-    - 'echo $DOCKERHUB_TOKEN | docker login -u nilsramsperger --password-stdin'
+    - 'docker login -u nilsramsperger -p $DOCKERHUB_TOKEN'
     - 'docker build --no-cache -t nilsramsperger/nodebb:latest .'
     - 'docker push nilsramsperger/nodebb:latest'
   only:
@@ -19,7 +19,7 @@ build-tags:
   services:
     - docker:dind
   script:
-    - 'echo $DOCKERHUB_TOKEN | docker login -u nilsramsperger --password-stdin'
+    - 'docker login -u nilsramsperger -p $DOCKERHUB_TOKEN'
     - 'docker build --no-cache -t nilsramsperger/nodebb:$CI_BUILD_REF_NAME .'
     - 'docker push nilsramsperger/nodebb:$CI_BUILD_REF_NAME'
   only:
