@@ -3,7 +3,7 @@
 shutdown() {
     echo "Shutting down."
     node nodebb stop
-    [ -e /etc/nodebb/config.json ] || cp /opt/nodebb/config.json /etc/nodebb/config.json
+    [ ! -e /etc/nodebb/config.json ] && [ -e /opt/nodebb/config.json ] && cp /opt/nodebb/config.json /etc/nodebb/config.json
     echo "Stopped"
     exit 143;
 }
