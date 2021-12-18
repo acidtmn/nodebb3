@@ -1,28 +1,28 @@
 #!/bin/ash
 shutdown() {
-    pkill -f redis-server
-    echo "Redis stoped"
-    [ ! -e /etc/nodebb/config.json ] && [ -e /opt/nodebb/config.json ] && cp /opt/nodebb/config.json /etc/nodebb/config.json
-    echo "Stopped"
-    exit 143;
+  pkill -f redis-server
+  echo "Redis stoped"
+  [ ! -e /etc/nodebb/config.json ] && [ -e /opt/nodebb/config.json ] && cp /opt/nodebb/config.json /etc/nodebb/config.json
+  echo "Stopped"
+  exit 143;
 }
 
 term_handler() {
-    echo "SIGTERM received"
-    pkill -f node
-    echo "NodeBB stoped"
-    shutdown
+  echo "SIGTERM received"
+  pkill -f node
+  echo "NodeBB stoped"
+  shutdown
 }
 
 set_timezone() {
-    if [ ! -z $timezone ]
-    then
-        echo "Setting timezone"
-        apk add tzdata;
-        cp /usr/share/zoneinfo/"$timezone" /etc/localtime;
-        echo $timezone > /etc/timezone;
-        apk del tzdata;
-    fi
+  if [ ! -z $timezone ]
+  then
+    echo "Setting timezone"
+    apk add tzdata;
+    cp /usr/share/zoneinfo/"$timezone" /etc/localtime;
+    echo $timezone > /etc/timezone;
+    apk del tzdata;
+  fi
 }
 
 trap term_handler SIGTERM
