@@ -18,13 +18,10 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 ### Tags
 
 - `latest`
+- `v1.19.4`
 - `v1.19.2`
 - `v1.19.1`
 - `v1.19.0`
-- `v1.18.6`
-- `v1.18.5`
-- `v1.18.4`
-- `v1.18.3`
 - several older versions
 
 Be advised, any other tags are for experimental purpose and might not be runnable.
@@ -46,7 +43,7 @@ Start the container
 
 On first run, NodeBB will start it's web installer interface.
 There you can create your admin account and set things up.
-Just leave the database settings as they are and click "Install NodeBB".
+Switch the database to Redis and click "Install NodeBB".
 When everything is done, click "Launch NodeBB".
 The container will restart and the browser switch to the forum.
 
