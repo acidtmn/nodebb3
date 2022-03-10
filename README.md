@@ -47,6 +47,10 @@ Switch the database to Redis and click "Install NodeBB".
 When everything is done, click "Launch NodeBB".
 The container will restart and the browser switch to the forum.
 
+**Attention:**
+The Web Installer of 1.19.4 leaks the admin password to the log!
+Be sure to change it right after a fresh installation.
+
 If an image of version 1.5.x or less is used, the container will not restart on "Launch NodeBB".
 The restart must be done manually.
 
