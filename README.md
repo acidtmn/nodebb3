@@ -18,6 +18,7 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 ### Tags
 
 - `latest`
+- `v1.19.5`
 - `v1.19.4`
 - `v1.19.2`
 - `v1.19.1`
@@ -58,7 +59,7 @@ The restart must be done manually.
 
 #### Public URL
 
-If your NodeBB forum is accessable via a public URL, it needs to be told about that.
+If your NodeBB forum is accessible via a public URL, it needs to be told about that.
 Otherwise some features might break.
 WebSockets for example.
 Tell NodeBB about it's public URL by setting the `url` environment variable on container creation.
