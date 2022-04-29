@@ -18,6 +18,7 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 ### Tags
 
 - `latest`
+- `v1.19.7`
 - `v1.19.6`
 - `v1.19.5`
 - `v1.19.4`
