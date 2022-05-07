@@ -51,7 +51,8 @@ Switch the database to Redis and click "Install NodeBB".
 When everything is done, click "Launch NodeBB".
 The container will restart and the browser switch to the forum.
 
-**Attention:**
+### Attention
+
 I am not sure, if an upgrade from 1.19.x to 2.x.x works well in terms of the DB schema upgrade.
 So be sure to backup your volumes in case anything goes awry.
 
