@@ -1,9 +1,9 @@
 FROM node:16-alpine AS build
 RUN apk add --no-cache redis git sed \
   && cd /opt \
-  && git clone -b v1.x.x https://github.com/NodeBB/NodeBB.git nodebb \
+  && git clone https://github.com/NodeBB/NodeBB.git nodebb \
   && cd nodebb \
-  && git checkout -b v1.19.7 v1.19.7 \
+  && git checkout -b v2.0.0 v2.0.0 \
   && cp install/package.json package.json \
   && npm install --production \
   && sed -i '1 idaemonize yes' /etc/redis.conf \

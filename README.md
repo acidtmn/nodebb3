@@ -18,6 +18,7 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 ### Tags
 
 - `latest`
+- `v2.0.0`
 - `v1.19.7`
 - `v1.19.6`
 - `v1.19.5`
@@ -51,6 +52,9 @@ When everything is done, click "Launch NodeBB".
 The container will restart and the browser switch to the forum.
 
 **Attention:**
+I am not sure, if an upgrade from 1.19.x to 2.x.x works well in terms of the DB schema upgrade.
+So be sure to backup your volumes in case anything goes awry.
+
 The Web Installer of 1.19.4 leaks the admin password to the log!
 Be sure to change it right after a fresh installation.
 
