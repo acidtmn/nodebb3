@@ -33,7 +33,7 @@ Best stick to `latest` or a specific version tag.
 
 ## Setup
 
-Create the container
+### Create the container
 
 `docker create --name myNodeBB --init --restart always -p 4567:4567 -v nodebb-data:/var/lib/redis -v nodebb-files:/opt/nodebb/public/uploads -v nodebb-config:/etc/nodebb nilsramsperger/nodebb`
 
@@ -41,13 +41,13 @@ In this case the container named `myNodeBB` and is bound to local port 4567.
 The three volumes are linked to the named volumes `nodebb-data`, `nodebb-files` and `nodebb-config`.
 Change things as you like.
 
-Start the container
+### Start the container
 
 `docker start myNodeBB`
 
 On first run, NodeBB will start it's web installer interface.
 There you can create your admin account and set things up.
-Switch the database to Redis and click "Install NodeBB".
+**Switch the database to Redis** and click "Install NodeBB".
 When everything is done, click "Launch NodeBB".
 The container will restart and the browser switch to the forum.
 
