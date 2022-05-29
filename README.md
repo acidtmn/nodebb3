@@ -28,6 +28,7 @@ The image tagged as `latest` is equal to the latest version of the v2 branch.
 
 #### 1.x.x branch
 
+- `v1.19.8`
 - `v1.19.7`
 - `v1.19.6`
 - `v1.19.5`
