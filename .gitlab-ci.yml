@@ -1,28 +1,40 @@
 stages:
- - build
+  - build
 
-build-latest:
+build:
   stage: build
   image: docker:git
   services:
     - docker:dind
   script:
-    - 'docker login -u nilsramsperger -p $DOCKERHUB_TOKEN'
-    - 'docker build --no-cache -t nilsramsperger/nodebb:latest .'
-    - 'docker push nilsramsperger/nodebb:latest'
+    - "docker login -u nilsramsperger -p $DOCKERHUB_TOKEN"
+    - "docker build --no-cache -t nilsramsperger/nodebb:latest ."
   only:
     - master
+    - 1.x.x
 
-build-tags:
+build-publish-1xx:
   stage: build
   image: docker:git
   services:
     - docker:dind
   script:
-    - 'docker login -u nilsramsperger -p $DOCKERHUB_TOKEN'
-    - 'docker build --no-cache -t nilsramsperger/nodebb:$CI_BUILD_REF_NAME .'
-    - 'docker push nilsramsperger/nodebb:$CI_BUILD_REF_NAME'
+    - "docker login -u nilsramsperger -p $DOCKERHUB_TOKEN"
+    - "docker build --no-cache -t nilsramsperger/nodebb:$CI_BUILD_REF_NAME ."
+    - "docker push nilsramsperger/nodebb:$CI_BUILD_REF_NAME"
   only:
-    refs:
-      - tags
+    - /^v1\..*$/
 
+build-publish-2xx:
+  stage: build
+  image: docker:git
+  services:
+    - docker:dind
+  script:
+    - "docker login -u nilsramsperger -p $DOCKERHUB_TOKEN"
+    - "docker build --no-cache -t nilsramsperger/nodebb:$CI_BUILD_REF_NAME ."
+    - "docker push nilsramsperger/nodebb:$CI_BUILD_REF_NAME"
+    - "docker tag nodebb:$CI_BUILD_REF_NAME nodebb:latest"
+    - "docker push nilsramsperger/nodebb:latest"
+  only:
+    - /^v2\..*$/
