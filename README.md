@@ -17,7 +17,17 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 
 ### Tags
 
+Currently NodeBB has two active branches for v2 and v1.
+The image tagged as `latest` is equal to the latest version of the v2 branch.
+
+#### 2.x.x branch
+
 - `latest`
+- `v2.0.1`
+- `v2.0.0`
+
+#### 1.x.x branch
+
 - `v1.19.7`
 - `v1.19.6`
 - `v1.19.5`
@@ -25,14 +35,13 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 - `v1.19.2`
 - `v1.19.1`
 - `v1.19.0`
-- several older versions
 
 Be advised, any other tags are for experimental purpose and might not be runnable.
 Best stick to `latest` or a specific version tag.
 
 ## Setup
 
-Create the container
+### Create the container
 
 `docker create --name myNodeBB --init --restart always -p 4567:4567 -v nodebb-data:/var/lib/redis -v nodebb-files:/opt/nodebb/public/uploads -v nodebb-config:/etc/nodebb nilsramsperger/nodebb`
 
@@ -40,17 +49,21 @@ In this case the container named `myNodeBB` and is bound to local port 4567.
 The three volumes are linked to the named volumes `nodebb-data`, `nodebb-files` and `nodebb-config`.
 Change things as you like.
 
-Start the container
+### Start the container
 
 `docker start myNodeBB`
 
 On first run, NodeBB will start it's web installer interface.
 There you can create your admin account and set things up.
-Switch the database to Redis and click "Install NodeBB".
+**Switch the database to Redis** and click "Install NodeBB".
 When everything is done, click "Launch NodeBB".
 The container will restart and the browser switch to the forum.
 
-**Attention:**
+### Attention
+
+I am not sure, if an upgrade from 1.19.x to 2.x.x works well in terms of the DB schema upgrade.
+So be sure to backup your volumes in case anything goes awry.
+
 The Web Installer of 1.19.4 leaks the admin password to the log!
 Be sure to change it right after a fresh installation.
 
