@@ -17,9 +17,17 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 
 ### Tags
 
+Currently NodeBB has two active branches for v2 and v1.
+The image tagged as `latest` is equal to the latest version of the v2 branch.
+
+#### 2.x.x branch
+
 - `latest`
 - `v2.0.1`
 - `v2.0.0`
+
+#### 1.x.x branch
+
 - `v1.19.7`
 - `v1.19.6`
 - `v1.19.5`
@@ -27,7 +35,6 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 - `v1.19.2`
 - `v1.19.1`
 - `v1.19.0`
-- several older versions
 
 Be advised, any other tags are for experimental purpose and might not be runnable.
 Best stick to `latest` or a specific version tag.
