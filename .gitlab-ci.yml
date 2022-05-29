@@ -34,7 +34,7 @@ build-publish-2xx:
     - "docker login -u nilsramsperger -p $DOCKERHUB_TOKEN"
     - "docker build --no-cache -t nilsramsperger/nodebb:$CI_BUILD_REF_NAME ."
     - "docker push nilsramsperger/nodebb:$CI_BUILD_REF_NAME"
-    - "docker tag nodebb:$CI_BUILD_REF_NAME nodebb:latest"
+    - "docker tag nilsramsperger/nodebb:$CI_BUILD_REF_NAME nilsramsperger/nodebb:latest"
     - "docker push nilsramsperger/nodebb:latest"
   only:
     - /^v2\..*$/
