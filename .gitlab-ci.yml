@@ -12,6 +12,10 @@ build:
   only:
     - master
     - 1.x.x
+  except:
+    changes:
+      - README.md
+      - scripts/**
 
 build-publish-1xx:
   stage: build
@@ -24,6 +28,10 @@ build-publish-1xx:
     - "docker push nilsramsperger/nodebb:$CI_BUILD_REF_NAME"
   only:
     - /^v1\..*$/
+  except:
+    changes:
+      - README.md
+      - scripts/**
 
 build-publish-2xx:
   stage: build
@@ -38,3 +46,7 @@ build-publish-2xx:
     - "docker push nilsramsperger/nodebb:latest"
   only:
     - /^v2\..*$/
+  except:
+    changes:
+      - README.md
+      - scripts/**
