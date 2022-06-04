@@ -3,7 +3,6 @@
 [![dockerhub](https://img.shields.io/docker/pulls/nilsramsperger/nodebb?label=Docker%20pulls)](https://hub.docker.com/r/nilsramsperger/nodebb)
 [![GitLab](https://img.shields.io/badge/Sources-GitLab-orange)](https://gitlab.com/nilsramsperger/docker-nodebb)
 [![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/NilsRamsperger)
-[![twitter](https://img.shields.io/twitter/follow/nilsramsperger)](https://twitter.com/nilsramsperger)
 
 A simple Docker image for quick-launching a NodeBB forum.
 
@@ -109,10 +108,6 @@ On startup, the container will run a `nodebb upgrade` and thus prepare the datab
 
 Since NodeBB is started via the `app.js`, restarting from admin panel is disabled.
 If you want to, just restart the container.
-
-## Update notifications
-
-If you want to stay informed about fresh releases, I post about them on my Twitter @nilsramsperger.
 
 ## Troubleshooting
 
