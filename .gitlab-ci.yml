@@ -10,12 +10,13 @@ build:
     - "docker login -u nilsramsperger -p $DOCKERHUB_TOKEN"
     - "docker build --no-cache -t nilsramsperger/nodebb:latest ."
   only:
-    - master
-    - 1.x.x
-  except:
+    ref:
+      - master
+      - 1.x.x
     changes:
-      - README.md
-      - scripts/**
+      - Dockerfile
+      - .gitlab-ci.yml
+      - files/**/*
 
 build-publish-1xx:
   stage: build
@@ -27,7 +28,8 @@ build-publish-1xx:
     - "docker build --no-cache -t nilsramsperger/nodebb:$CI_BUILD_REF_NAME ."
     - "docker push nilsramsperger/nodebb:$CI_BUILD_REF_NAME"
   only:
-    - /^v1\..*$/
+    ref:
+      - /^v1\..*$/
 
 build-publish-2xx:
   stage: build
@@ -41,4 +43,5 @@ build-publish-2xx:
     - "docker tag nilsramsperger/nodebb:$CI_BUILD_REF_NAME nilsramsperger/nodebb:latest"
     - "docker push nilsramsperger/nodebb:latest"
   only:
-    - /^v2\..*$/
+    ref:
+      - /^v2\..*$/
