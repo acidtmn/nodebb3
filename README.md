@@ -14,10 +14,20 @@ The NodeBB comes with no plugins and the forum data is stored in a [Redis](http:
 The Redis is configured for [AOF persistence](http://redis.io/topics/persistence).
 Not the fastest but the least chance for data loss on unexpected shutdowns.
 
+### Stay up to date
+
+New releases of the NodeBB image come with a corresponding tag in the repo.
+You can subscribe the (atom feed)[https://gitlab.com/nilsramsperger/docker-nodebb/-/tags?feed_token=3gGKWx2TxunMet1JQ7QG&format=atom] to be notified about updates.
+
 ### Tags
 
 Currently NodeBB has two active branches for v2 and v1.
 The image tagged as `latest` is equal to the latest version of the v2 branch.
+
+With the arrival of the v2 branch, the NodeBB team updated it's release policy.
+Updates come with a much more high frequency now.
+I cannot guarantee that every release will find it's way into a new build of the image.
+But I will build an up to date image asap.
 
 #### 2.x.x branch
 
