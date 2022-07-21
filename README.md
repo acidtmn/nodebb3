@@ -32,6 +32,7 @@ But I will build an up to date image asap.
 #### 2.x.x branch
 
 - `latest`
+- `v2.2.5`
 - `v2.2.4`
 - `v2.2.3`
 - `v2.2.0`
