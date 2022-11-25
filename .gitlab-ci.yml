@@ -12,26 +12,12 @@ build:
   only:
     refs:
       - master
-      - 1.x.x
     changes:
       - Dockerfile
       - .gitlab-ci.yml
       - files/**/*
 
-build-publish-1xx:
-  stage: build
-  image: docker:git
-  services:
-    - docker:dind
-  script:
-    - "docker login -u nilsramsperger -p $DOCKERHUB_TOKEN"
-    - "docker build --no-cache -t nilsramsperger/nodebb:$CI_BUILD_REF_NAME ."
-    - "docker push nilsramsperger/nodebb:$CI_BUILD_REF_NAME"
-  only:
-    refs:
-      - /^v1\..*$/
-
-build-publish-2xx:
+publish:
   stage: build
   image: docker:git
   services:
@@ -44,4 +30,4 @@ build-publish-2xx:
     - "docker push nilsramsperger/nodebb:latest"
   only:
     refs:
-      - /^v2\..*$/
+      - tags

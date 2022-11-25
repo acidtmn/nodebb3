@@ -21,16 +21,6 @@ You can subscribe the (atom feed)[https://gitlab.com/nilsramsperger/docker-nodeb
 
 ### Tags
 
-Currently NodeBB has two active branches for v2 and v1.
-The image tagged as `latest` is equal to the latest version of the v2 branch.
-
-With the arrival of the v2 branch, the NodeBB team updated it's release policy.
-Updates come with a much more high frequency now.
-I cannot guarantee that every release will find it's way into a new build of the image.
-But I will build an up to date image asap.
-
-#### 2.x.x branch
-
 - `latest`
 - `v2.6.0`
 - `v2.5.8`
@@ -40,17 +30,6 @@ But I will build an up to date image asap.
 - `v2.4.1`
 - `v2.4.0`
 - `v2.3.1`
-
-#### 1.x.x branch
-
-- `v1.19.8`
-- `v1.19.7`
-- `v1.19.6`
-- `v1.19.5`
-- `v1.19.4`
-- `v1.19.2`
-- `v1.19.1`
-- `v1.19.0`
 
 Be advised, any other tags are for experimental purpose and might not be runnable.
 Best stick to `latest` or a specific version tag.
@@ -74,17 +53,6 @@ There you can create your admin account and set things up.
 **Switch the database to Redis** and click "Install NodeBB".
 When everything is done, click "Launch NodeBB".
 The container will restart and the browser switch to the forum.
-
-### Attention
-
-I am not sure, if an upgrade from 1.19.x to 2.x.x works well in terms of the DB schema upgrade.
-So be sure to backup your volumes in case anything goes awry.
-
-The Web Installer of 1.19.4 leaks the admin password to the log!
-Be sure to change it right after a fresh installation.
-
-If an image of version 1.5.x or less is used, the container will not restart on "Launch NodeBB".
-The restart must be done manually.
 
 ### Environment Variables
 
