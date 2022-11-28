@@ -22,6 +22,7 @@ You can subscribe the (atom feed)[https://gitlab.com/nilsramsperger/docker-nodeb
 ### Tags
 
 - `latest`
+- `v2.6.1`
 - `v2.6.0`
 - `v2.5.8`
 - `v2.5.7`
