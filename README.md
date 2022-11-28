@@ -17,7 +17,7 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 ### Stay up to date
 
 New releases of the NodeBB image come with a corresponding tag in the repo.
-You can subscribe the (atom feed)[https://gitlab.com/nilsramsperger/docker-nodebb/-/tags?feed_token=3gGKWx2TxunMet1JQ7QG&format=atom] to be notified about updates.
+You can follow me on Mastodon (@nilsramsperger@home.social) to be notified about updates.
 
 ### Tags
 
