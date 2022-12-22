@@ -22,16 +22,13 @@ You can follow me on Mastodon (@nilsramsperger@home.social) to be notified about
 ### Tags
 
 - `latest`
+- `v2.8.0`
 - `v2.7.0`
 - `v2.6.1`
 - `v2.6.0`
 - `v2.5.8`
 - `v2.5.7`
 - `v2.5.0`
-- `v2.4.4`
-- `v2.4.1`
-- `v2.4.0`
-- `v2.3.1`
 
 Be advised, any other tags are for experimental purpose and might not be runnable.
 Best stick to `latest` or a specific version tag.
