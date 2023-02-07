@@ -22,6 +22,7 @@ You can follow me on Mastodon (@nilsramsperger@home.social) to be notified about
 ### Tags
 
 - `latest`
+- `v2.8.6`
 - `v2.8.5`
 - `v2.8.2`
 - `v2.8.1`
