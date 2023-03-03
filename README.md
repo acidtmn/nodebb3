@@ -8,7 +8,7 @@ A simple Docker image for quick-launching a NodeBB forum.
 
 ## Description
 
-This repo contains the files for the automatic build of the Docker image `nilsramsperger/nodebb` hosted on [GitLab](https://gitlab.com/nilsramsperger/docker-nodebb).
+This repo contains the files for the automatic build of the Docker image `acidtmn/nodebb3` hosted on [GitLab](https://gitlab.com/acidtmn/nodebb3).
 
 The NodeBB comes with no plugins and the forum data is stored in a [Redis](http://redis.io) within the container.
 The Redis is configured for [AOF persistence](http://redis.io/topics/persistence).
