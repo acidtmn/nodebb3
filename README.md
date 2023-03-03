@@ -1,4 +1,4 @@
-# nacidtmn/nodebb3
+# acidtmn/nodebb3
 
 [![dockerhub](https://img.shields.io/docker/pulls/acidtmn/nodebb3?label=Docker%20pulls)](https://hub.docker.com/r/acidtmn/nodebb3)
 [![GitLab](https://img.shields.io/badge/Sources-GitHub-orange)](https://github.com/acidtmn/nodebb3)
