@@ -1,8 +1,8 @@
-# nilsramsperger/nodebb
+# nacidtmn/nodebb3
 
-[![dockerhub](https://img.shields.io/docker/pulls/nilsramsperger/nodebb?label=Docker%20pulls)](https://hub.docker.com/r/nilsramsperger/nodebb)
-[![GitLab](https://img.shields.io/badge/Sources-GitLab-orange)](https://gitlab.com/nilsramsperger/docker-nodebb)
-[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/NilsRamsperger)
+[![dockerhub](https://img.shields.io/docker/pulls/acidtmn/nodebb3?label=Docker%20pulls)](https://hub.docker.com/r/acidtmn/nodebb3)
+[![GitLab](https://img.shields.io/badge/Sources-GitHub-orange)](https://github.com/acidtmn/nodebb3)
+[![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://#)
 
 A simple Docker image for quick-launching a NodeBB forum.
 
@@ -17,22 +17,12 @@ Not the fastest but the least chance for data loss on unexpected shutdowns.
 ### Stay up to date
 
 New releases of the NodeBB image come with a corresponding tag in the repo.
-You can follow me on Mastodon (@nilsramsperger@home.social) to be notified about updates.
+
 
 ### Tags
 
-- `latest`
-- `v2.8.6`
-- `v2.8.5`
-- `v2.8.2`
-- `v2.8.1`
-- `v2.8.0`
-- `v2.7.0`
-- `v2.6.1`
-- `v2.6.0`
-- `v2.5.8`
-- `v2.5.7`
-- `v2.5.0`
+- `v3.0.0-beta.2`
+
 
 Be advised, any other tags are for experimental purpose and might not be runnable.
 Best stick to `latest` or a specific version tag.
@@ -71,7 +61,7 @@ Example: `-e url=https://www.myforum.com:8080`
 
 Per default, the container uses UTC as timezone.
 If you want to specify a different timezone, add `timezone` as ENV on container creation.
-Example: `-e timezone=Europe/Brussels`
+Example: `-e timezone=Europe/Moscow`
 
 ### Volumes
 
@@ -136,7 +126,7 @@ NodeBB shows an "invalid-event" error after performing updates and installation 
 An example is documented here:
 
 - [Invalid-Event when switching editor to quill.](https://community.nodebb.org/topic/15233/cannot-write-post-or-reply-after-1-15-1-16/4)
-- [Followup pull request](https://github.com/nilsramsperger/docker-nodebb/pull/10)
+- [Followup pull request](https://github.com/acidtmn/nodebb3)
 
 ### Solution
 
